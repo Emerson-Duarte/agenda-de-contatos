@@ -1,0 +1,250 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    height: 100%;
+   display: contents;
+  background-color: rgb(193, 192, 192);
+
+
+}
+.container {
+  display: grid;
+    max-width: 800px;
+    margin: 50px auto 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    margin: 0px 0 30px;
+    text-align: center;
+}
+
+.responsive-table {
+tr {
+    border-radius: 24px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+  &:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}
+.table-header {
+    background-color: #e37f1c;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  color: white;
+}
+.table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+  .col{
+    text-transform: uppercase;
+  }
+.col-1 {
+    flex-basis: 10%;
+    text-align: center;
+}
+.col-2 {
+    flex-basis: 20%;
+  text-align: center;
+
+}
+.col-3 {
+  flex-basis: 30%;
+  text-align: center;
+
+}
+.col-4 {
+  flex-basis: 15%;
+  text-align: center;
+
+}
+.col-5 {
+  flex-basis: 25%;
+  text-align: center;
+
+}
+  .button {
+    padding: 8px 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #999999;
+    background-color: #999999;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #3366ff;
+    }
+  }
+
+  .button:first-child {
+    &:hover {
+      background-color: #ff0000;
+    }
+  }
+  .button-view {
+    padding: 0 16px;
+  }
+}
+
+.container .table-footer {
+  display: flex;
+  justify-content: center;
+  background-color: #16338a;
+  border-radius: 50px;
+
+  &:hover {
+    background-color: #112c72;
+    transition: all 0.2s;
+  }
+}
+
+//PAGE NEW CONTACT
+.body {
+  display: flow-root;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(193, 192, 192);
+}
+
+#title-new-contact {
+  padding-top: 20vh;
+  color: black;
+}
+
+.b-new {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 16px;
+}
+
+.form-create {
+  display: flex;
+  padding: 16px;
+  margin: 8px;
+  //border: solid 1px #999999;
+  border-radius: 50px;
+
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: auto 10px ;
+  }
+
+  input {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    margin-left: 16px;
+    padding: 8px 0 8px 8px;
+    text-transform: uppercase;
+    background-color: rgb(255, 255, 255);
+  }
+
+}
+
+.table-create .form-create:first-child  input{
+  margin-left: 35px;
+}
+
+.table-create .form-create:nth-child(2) input{
+  margin-left: 30px;
+}
+
+
+.background-form {
+  background-color: #e37f1c;
+  border-radius: 16px;
+  width: 35vw;
+  margin: auto;
+}
+
+input[type=submit] {
+  display: flex;
+  margin: 0 auto 16px;
+  border-radius: 4px;
+  border: none;
+  padding: 4px 16px;
+
+  &:hover {
+    background-color: #3366ff;
+    transition: all 0.2s;
+    color: white;
+    border: none;
+  }
+}
+//@media all and (max-width: 767px) {
+//    .table-header {
+//        display: none;
+//    }
+//    .table-row{
+//
+//    }
+//    li {
+//        display: block;
+//    }
+//    .col {
+//
+//        flex-basis: 100%;
+//
+//    }
+//    .col {
+//        display: flex;
+//        padding: 10px 0;
+//&:before {
+//     color: #6C7A89;
+//     padding-right: 10px;
+//     content: attr(data-label);
+//     flex-basis: 50%;
+//     text-align: right;
+// }
+//}
+//}
