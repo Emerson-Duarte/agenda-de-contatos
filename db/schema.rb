@@ -10,12 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_12_144426) do
+ActiveRecord::Schema.define(version: 2020_09_14_134621) do
 
   create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.integer "phone"
+    t.bigint "kind_id"
+    t.index ["kind_id"], name: "index_contacts_on_kind_id"
+  end
+
+  create_table "kinds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "description"
   end
 
 end

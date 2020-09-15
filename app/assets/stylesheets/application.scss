@@ -28,6 +28,17 @@ body {
 
 
 }
+
+ul.header {
+  display: flex;
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    margin-right: 50px;
+  }
+}
+
 .container {
   display: grid;
     max-width: 800px;
@@ -65,7 +76,7 @@ tr {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-  color: white;
+    color: white;
 }
 .table-row {
     background-color: #ffffff;

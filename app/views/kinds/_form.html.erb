@@ -1,0 +1,12 @@
+<%= form_with(model: kind, local: true) do |form|  %>
+  <div class="table-create">
+    <div class="form-create">
+      <%= form.label :description %>
+      <%= form.text_field :description %>
+    </div>
+  </div>
+
+
+
+  <%= form.submit kind.new_record? ? 'Adicionar' : 'Editar'%>
+<% end %>

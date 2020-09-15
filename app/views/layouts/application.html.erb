@@ -10,6 +10,10 @@
   </head>
 
   <body>
+  <ul class="header">
+    <li><%= link_to 'Contacts', contacts_path, class: 'button' %></li>
+    <li><%= link_to 'Kinds', kinds_path, class: 'button' %></li>
+  </ul>
     <%= yield %>
   </body>
 </html>

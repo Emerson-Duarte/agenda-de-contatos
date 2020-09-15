@@ -1,0 +1,48 @@
+<!--<h1>Agenda de Contatos</h1>-->
+<!--<div class="container">-->
+
+
+<!--<table>-->
+<!--  <thead>-->
+<!--<tr>-->
+<!--<th>Nome</th>-->
+<!--      <th>Endereço</th>-->
+<!--      <th>Telefone</th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+<!--</table>-->
+
+<!--</div>-->
+<div class="body">
+  <div class="container">
+    <h1> List of Kinds </h1>
+    <table class="responsive-table">
+      <thead>
+      <tr class="table-header">
+        <th class="col col-1">Id</th>
+        <th class="col col-2">Description</th>
+        <th class="col col-5"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @kinds.each do |kind| %>
+        <tr class="table-row">
+          <td class="col col-1"><%= kind.id %></td>
+          <td class="col col-2"><%= kind.description %></td>
+          <td class="col col-5">
+            <%= link_to 'Excluir', kind, class: 'button', method: :delete, data: { confirm: 'Você tem certeza?'} %>
+            <%= link_to 'Editar', edit_kind_path(kind), class: 'button' %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <div class="table-footer">
+      <%= link_to 'Novo', new_kind_path, class: 'b-new' %>
+    </div>
+
+
+  </div>
+</div>

@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(items_params)
+    @contact = Contact.new(contacts_params)
 
     respond_to do |format|
       if @contact.save
@@ -27,7 +27,7 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
 
     respond_to do |format|
-      if @contact.update(items_params)
+      if @contact.update(contacts_params)
         format.html { redirect_to contacts_path, notice: 'Sucesso' }
       else
         format.html { render :edit }
@@ -40,13 +40,13 @@ class ContactsController < ApplicationController
     @contact.destroy
 
     respond_to do |format|
-      format.html { redirect_to contacts_path, notice: 'Foi deletado com sucesso!'}
+      format.html { redirect_to contacts_path, notice: 'Foi deletado com sucesso!' }
     end
   end
 
   private
 
-  def items_params
-    params.require(:contact).permit(:name, :address, :phone)
+  def contacts_params
+    params.require(:contact).permit(:name, :address, :phone, :kind_id)
   end
 end

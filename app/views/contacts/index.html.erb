@@ -1,29 +1,15 @@
-<!--<h1>Agenda de Contatos</h1>-->
-<!--<div class="container">-->
-
-
-<!--<table>-->
-<!--  <thead>-->
-<!--<tr>-->
-<!--<th>Nome</th>-->
-<!--      <th>Endereço</th>-->
-<!--      <th>Telefone</th>-->
-<!--    </tr>-->
-<!--  </thead>-->
-<!--</table>-->
-
-<!--</div>-->
 <div class="body">
   <div class="container">
-    <h1> Agenda de Contatos </h1>
+    <h1>Contact Book </h1>
     <table class="responsive-table">
       <thead>
       <tr class="table-header">
         <th class="col col-1">Id</th>
-        <th class="col col-2">Nome</th>
-        <th class="col col-3">Endereço</th>
-        <th class="col col-4">Telefone</th>
-        <th class="col col-5">Opções</th>
+        <th class="col col-2">Name</th>
+        <th class="col col-3">Address</th>
+        <th class="col col-4">Phone</th>
+        <th class="col col-4">Kind</th>
+        <th class="col col-5">Options</th>
       </tr>
       </thead>
 
@@ -34,9 +20,10 @@
           <td class="col col-2"><%= contact.name %></td>
           <td class="col col-3"><%= contact.address %></td>
           <td class="col col-4"><%= contact.phone %></td>
+          <td class="col col-4"><%= contact.kind.description %></td>
           <td class="col col-5">
-            <%= link_to 'Excluir', contact, class: 'button', method: :delete, data: { confirm: 'Você tem certeza?'} %>
-            <%= link_to 'Editar', edit_contact_path(contact), class: 'button' %>
+            <%= link_to 'Delete', contact, class: 'button', method: :delete, data: { confirm: 'Você tem certeza?'} %>
+            <%= link_to 'Edit', edit_contact_path(contact), class: 'button' %>
           </td>
         </tr>
       <% end %>
@@ -46,7 +33,5 @@
     <div class="table-footer">
       <%= link_to 'Novo', new_contact_path, class: 'b-new' %>
     </div>
-
-
   </div>
 </div>
