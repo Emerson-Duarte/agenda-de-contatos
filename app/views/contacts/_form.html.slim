@@ -1,0 +1,15 @@
+= form_with(model: contact, local: true) do |form|
+  .table-create
+    .form-create
+      = form.label :name
+      = form.text_field :name
+    .form-create
+      = form.label :phone
+      = form.phone_field :phone
+    .form-create.last
+      = form.label :address
+      = form.text_field :address
+    .form-create.last
+      = form.label :kind
+      = form.collection_select(:kind_id, Kind.all, :id, :description )
+  = form.submit contact.new_record? ? 'Adicionar' : 'Editar'

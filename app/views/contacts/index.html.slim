@@ -1,0 +1,104 @@
+/ .body
+/   .container
+/     h1
+/       | Contact Book
+/     table.responsive-table
+/       thead
+/         tr.table-header
+/           th.col.col-1
+/             | Id
+/           th.col.col-2
+/             | Name
+/           th.col.col-3
+/             | Address
+/           th.col.col-4
+/             | Phone
+/           th.col.col-4
+/             | Kind
+/           th.col.col-5
+/             | Options
+/       tbody
+/         - @contacts.each do |contact|
+/           tr.table-row
+/             td.col.col-1
+/               = contact.id
+/             td.col.col-2
+/               = contact.name
+/             td.col.col-3
+/               = contact.address
+/             td.col.col-4
+/               = contact.phone
+/             td.col.col-4
+/               = contact.kind.description
+/             td.col.col-5
+/               = link_to 'Delete', contact, class: 'button', method: :delete, data: { confirm: 'Você tem certeza?'}
+/               = link_to 'Edit', edit_contact_path(contact), class: 'button'
+/     .table-footer
+/       = link_to 'Novo', new_contact_path, class: 'b-new'
+
+
+<!--     <%#= notice %> Testar esse comando depois-->
+
+.body
+  .container
+    h1
+      | Contact Book
+    table.responsive-table
+      thead
+        tr.table-header
+          th.col.col-1
+            | Id
+          th.col.col-2
+            | Name
+          th.col.col-3
+            | Address
+          th.col.col-4
+            | Phone
+          th.col.col-4
+            | Kind
+          th.col.col-5
+            | Options
+      tbody
+        - @contacts.each do |contact|
+          tr.table-row
+            td.col.col-1
+              = contact.id
+            td.col.col-2
+              = contact.name
+            td.col.col-3 = contact.address
+            td.col.col-4
+              = contact.phone
+            td.col.col-4
+              = contact.kind.description
+            td.col.col-5
+              = link_to 'Delete', contact, class: 'button', method: :delete, data: {confirm: 'Você tem certeza?'}
+              = link_to 'Edit', edit_contact_path(contact), class: 'button'
+
+    .table-footer
+      = link_to 'Novo', new_contact_path, class: 'b-new'
+
+
+
+    / table.responsive-table
+    /   thead
+    /   tr.table-header
+    /     th.col.col-1 Id
+    /     th.col.col-2 Name
+    /     th.col.col-3 Address
+    /     th.col.col-4 Phone
+    /     th.col.col-4 Kind
+    /     th.col.col-5 Options
+    /
+    /   tbody
+    /     - @contacts.each do |contact|
+    /     tr.table-row
+    /       / <th class="col col-1">#{kind.id}</th>
+    /       td.col.col-1 contact.id
+    /       td.col.col-2 contact.name
+    /       td.col.col-3 contact.address
+    /       td.col.col-4 contact.phone
+    /       td.col.col-4 contact.kind.description
+    /       td.col.col-5
+    /         | <%= link_to 'Delete', contact, class: 'button', method: :delete, data: { confirm: 'Você tem certeza?'} %>
+    /         | <%= link_to 'Edit', edit_contact_path(contact), class: 'button' %>
+
